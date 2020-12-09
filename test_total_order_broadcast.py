@@ -10,13 +10,7 @@ import time
 # messages
 message_data = ("Hello",
                 "NH...",
-                "KYON",
-                "PPPPPPPP",
-                "Hello Again",
-                "No Hello",
-                "Kidhar gya tha",
-                "Hello again",
-                "Hello Again")
+                "KYON")
 
 buffer_size = 1024
 
@@ -41,7 +35,7 @@ def create_client():
         # send data to process
         udp_socket_client = socket.socket(family=socket.AF_INET, type=socket.SOCK_DGRAM)
         udp_socket_client.sendto(bytes_to_send, client)
-        print("message send by sever: {}".format(client))
+        print("message send by sever A: {}".format(client) + message)
         udp_socket_client.close()
         time.sleep(1)
 

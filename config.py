@@ -3,15 +3,15 @@ Config file
 """
 
 # Sequencer configuration
-SEQUENCER = {"name": "sequencer", "address": ("127.0.0.1", 20001)}
+SEQUENCER = {"name": "sequencer", "address": ("192.168.0.14", 20055)}
 
 # Node process client configuration
-CLIENTS = ({"name": "process_1", "address": ("127.0.0.1", 20002)},
-           {"name": "process_2", "address": ("127.0.0.1", 20003)},
-           {"name": "process_3", "address": ("127.0.0.1", 20004)})
+CLIENTS = (
+           {"name": "process_2", "address": ("192.168.0.14", 20057)},
+           {"name": "process_3", "address": ("192.168.56.1", 10058)})
 
-# Broadcast message configuration
-BROADCAST = (("127.0.0.1", 20001), ("127.0.0.1", 20002), ("127.0.0.1", 20003), ("127.0.0.1", 20004))
+# Broadcast message configuration for 2 process
+BROADCAST = (("192.168.0.14", 20055),("192.168.0.14", 20057), ("192.168.56.1", 10058))
 
 # Node process list names
-PROCESSES = ("process_1", "process_2", "process_3")
+PROCESSES = ("process_2", "process_3")

@@ -4,9 +4,9 @@ Module which has all the node processes
 import json
 import socket
 import threading
-
+from multiprocessing import Queue
 from message_detail import Message
-import queue
+
 from config import BROADCAST, PROCESSES
 
 
@@ -50,7 +50,7 @@ class Process(threading.Thread):
 
 
         # put message as per sequence id priority
-        priority_queue = queue.PriorityQueue()
+        priority_queue = Queue.PriorityQueue()
 
         # Delivered messages order
         delivered = []
